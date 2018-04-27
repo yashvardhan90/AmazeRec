@@ -1,0 +1,51 @@
+products rated by user AO00I2TVC9LBB
+['B00BQJ9SNO', His Desire Her Surrender (Dominating Billionaires Romance #2): Dominating Billionaires (Dominating BDSM Billionaires)
+ 'B00DY8HAH6', Description: Desire: The Dining Club: Part One
+  'B00KKBZYGY', Description: Wish of the Heart (Fountain of Love) (Contemporary Romantic Suspense): Fountain of Love
+   'B00ISYAI52',
+    'B00K8HKI8O', Description: A Ghostly Ménage: Werewolf Paranormal
+ 'B00KJJ4XVO', Romancing Rosalie - A Ladies of Cascade Creek Christmas (Historical Western Romance): The Ladies of Cascade Creek
+ 'B00KA0AQP4',
+ 'B00DY8HAJO', 'B00DY8HAJ4', 'B00DUWZC76', 'B009RDMZ86', 'B00DJ60BS8',
+ 'B00G2UXCK2', 'B00E4V2VCG', 'B00H0UT86K', 'B00K8A9CCO', 'B00KTK56P0', 'B00C4X5RBI',
+ 'B00KB3YL0Q', 'B00HUU13ZE', 'B00IFR0XP2', 'B00H0UT88I', 'B00HYZ06ZI', 'B00HHDERTI',
+ 'B00L5O9V5K', 'B00A8NGHE2']
+
+Collaborative Filtering without sentiment:
+'B00KIXIBYQ', 4.966666666666667),
+('B00KBDWHKM', 4.966666666666667),
+ ('B00BTPOFSI', 4.966666666666667),
+  ('B00FR3ZCG2', 4.966666666666667),
+   ('B00GW7NHXM', 4.966666666666667),
+    ('B00IW3BOC0', 4.966666666666667),
+    ('B00KKQACDO', 4.966666666666667),
+
+Collaborative Filtering with sentiment:
+('B00GO6VI50', 5.192107692307692),
+ ('B00B3KPBSW', 5.192107692307692),
+  ('B009P59SFY', 5.192107692307692),
+   ('B00HLX9Z3C', 5.192107692307692),
+   ('B00JHNAWQS', 5.192107692307692),
+   ('B00KA0AGJK', 5.192107692307692),
+   ('B00GW9H8XA', 5.192107692307692),
+   ('B002HUU0A6', 5.192107692307692
+
+Collaborative Filtering with biases without sentiment:
+'B00KJ7RAYI', 5.5491876393647805), Unrequited: Unrequited Book #3 
+('B00G66WM4Y', 5.5491876393647805),
+ ('B00LPUXAGK', 5.507520972698113), More Than Forever (More Than Series, Book 4)
+ ('B00A1Q7SQM', 5.496556060417412),
+  ('B00KEXI780', 5.493632083809225),
+   ('B00KWREVQK', 5.482520972698114),
+   ('B00GMSI5BA', 5.472264562441704),
+
+Collaborative Filtering with biases with sentiment:
+  'B00LPUXAGK', 5.9451142349949775), More Than Forever (More Than Series, Book 4)
+  ('B00G66WM4Y', 5.906900598631341), Description: Steal the Moon (Thieves Book 3)
+  ('B00KJ7RAYI', 5.895450901661644), Unrequited: Unrequited Book #3
+  ('B00F3OO3IS', 5.892189234994977),
+  ('B00HBY2SSU', 5.838479619610362),  Vivid Temptation: 12 (Touched By You)
+  ('B00KVN6HH6', 5.830236698763094),
+  ('B00KKPKAAU', 5.816362107335402),
+  ('B00IWFPWKI', 5.807039234994979),
+  ('B00KEXI780', 5.803603123883868),
