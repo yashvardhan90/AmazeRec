@@ -1,27 +1,30 @@
 
-AmazeRec : You'll want to buy these!
+# AmazeRec : You'll want to buy these!#
 
 
-Introduction and Motivation
+## Introduction and Motivation
 The recommendations which use metrics like rmse are based on explicit ratings which are not always reliable in figuring out what the user really wants. We want to make use of product reviews, in particular the sentiments in the reviews left by the users. The choice of words by a user is indicative of her preference/dislike towards a certain type of product. By combining this insight with traditional algorithms like collaborative filtering/Matrix Factorization, we create a recommender system that is more personalized to the user.
 
 Another improvement our recommender provides is the inclusion of standard reviews of recommended item from reputed sources rather than from other users. Collaborative filtering does a good job at identifying the user interest but the actual reviews from other users provide little information about the item. Instead, reading a review of recommended book in our case by New York times will provide a lot more relevant information to the user.
-Related Work
-There are various approaches for recommenders that incorporate the reviews information to provide better recommendation e.g. HFT (Hidden Factors and Hidden Topics) which combine latent rating dimensions (such as those of latent-factor recommender systems) with latent review topics (such as those learned by topic models like LDA) . We were inspired by this idea and wanted to incorporate the simple sentiment information of the reviews in light weight.collaborative filtering models that does not add much of learning time and verify their performance on this new added feature.
 
-Proposed solution
+## Related Work
+There are various approaches for recommenders that incorporate the reviews information to provide better recommendation e.g. HFT (Hidden Factors and Hidden Topics) which combine latent rating dimensions (such as those of latent-factor recommender systems) with latent review topics (such as those learned by topic models like LDA) . We were inspired by this idea and wanted to incorporate the simple sentiment information of the reviews to light weight Collaborative filtering models that does not add much of learning time and verify their performance on this new added feature.
+
+## Proposed solution
 Our approach was to the get the sentiment score of the review on a scale of -1 to 1(-1= very bad, 1=very good) and then augment the actual rating with the sentiment score. We tried various approaches to mix them
 
-Scaling the sentiment score from 1-5 and averaging it with actual rating
-Adding the sentiment score directly to the rating
-Suppressing the less signinficant reviews i.e. sentiment score between -0.5 to 0.5, and considering only the impact of only the stronger reviews.
-Just using the sentiment scores to get the recommendations
+- Scaling the sentiment score from 1-5 and averaging it with actual rating
+- Adding the sentiment score directly to the rating
+- Suppressing the less signinficant reviews i.e. sentiment score between -0.5 to 0.5, and considering only the impact of only the stronger reviews.
+- Just using the sentiment scores to get the recommendations
+
+
 We found the best results for third approach opf supressing the less significant reviews. Our Recommendation system invlolves following steps:
-Get sentiment scores
-Add the sentiment scores(suppresses) with rating to generate new ratings on a scale of 5.5 to 0.5
-Get the recommendation based on chosen algorithm
-Extract the actual standand reviews of the books obtained via NYT API
-We tried this approach across various recommendation algorithms viz. simple Collaborative Filtering, Collaborative filtering with biases, Latent factors model, implicit factorization model. Although implicit feedback model does not consider ratings we used this to compare the MRR(Mean Reciprocal rating) with explicit factorization model. 
+- Get sentiment scores
+- Add the sentiment scores(suppresses) with rating to generate new ratings on a scale of 5.5 to 0.5
+- Get the recommendation based on chosen algorithm
+- Extract the actual standand reviews of the books obtained via NYT API
+- We tried this approach across various recommendation algorithms viz. simple Collaborative Filtering, Collaborative filtering with biases, Latent factors model, implicit factorization model. Although implicit feedback model does not consider ratings we used this to compare the MRR(Mean Reciprocal rating) with explicit factorization model. 
 
 Recommender Demo : For demo we have our recommender running in backend which writes the recommendations for a user in .json file. It is then loaded from the server when the user logs in. Then, website dynamically loads the book details and also its reviews though the Google API to provide the user with our recommendations for her.
 Evaluation and analysis of results
@@ -36,7 +39,8 @@ MRR for Implicit and ecplicit factorization(with sentiment): 0.01 & 0.02 (MRR sc
 
 
 Even Though RMSE Increased after adding sentiment scores, we observed that the for users with many neighbors ranks for top 50 items did not change much but he corresponding rating scale of prediction now varied from (0.5 to 5.5) providing more distinctions in top recommendations based on user review. For users users with few neighbours it will be a good idea as we he will get the recommendation of neighbor with strong review than of equidistant neighbor with lighter reviews. Also, we felt that mse might not always be the best way to compare a system that uses sentiment scores with one that uses ratings. So we used NDCG to calculate the effectiveness and found that the systems were almost equivalent in performance (0.923 vs 0.936)
-Discussion
+
+## Discussion
 Providing the user with our recommendations in an effective manner proved to be challenging. There were several issues to consider :
 
 The biggest challenge was to decide the approach on using the review information to power the recommender. Even for calculating the sentiment score, a naive approach that assigns a score for each word and then aggregating the scores wouldn’t have worked well. We had to find a parser that calculated sentiment scores more intelligently. We used 'valence aware sentimet dictionary and sentiment reasoner (VADER)'
