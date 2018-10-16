@@ -31,10 +31,15 @@ Evaluation and analysis of results
 We have used RMSE and MAE as a metric to compare the performance of the recommender. Additionally we have extracted the top-k recommendations for a few users and compared the ranks of recommended items. As we found it would be inefficient to find the recommendation for all the items for a user we considered only the items which close by users have rated. Also, we compared the MRR scores to evaluate the performance of various approaches.
 
 Collaborative Filtering: MAE: 0.67 , RMSE: 0.99
+
 Collaborative filtering with sentiment scores: MAE: 0.842, RMSE: 1.19
+
 SVD without sentiment scores: RMSE: 0.7432 MAE: 0.5305
+
 SVD with sentiment scores: RMSE: 0.7873 MAE: 0.4928
+
 MRR for Implicit and ecplicit factorization: 0.01 & 0.02
+
 MRR for Implicit and ecplicit factorization(with sentiment): 0.01 & 0.02 (MRR score did not change)
 
 
