@@ -1,5 +1,5 @@
 
-# AmazeRec : You'll want to buy these!#
+# AmazeRec : You'll want to buy these!
 
 
 ## Introduction and Motivation
