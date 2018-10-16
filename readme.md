@@ -3,7 +3,7 @@
 
 
 ## Introduction and Motivation
-The recommendations which use metrics like rmse are based on explicit ratings which are not always reliable in figuring out what the user really wants. We want to make use of product reviews, in particular the sentiments in the reviews left by the users. The choice of words by a user is indicative of her preference/dislike towards a certain type of product. By combining this insight with traditional algorithms like collaborative filtering/Matrix Factorization, we create a recommender system that is more personalized to the user.
+The recommendations which use metrics like RMSE are based on explicit ratings that are not always reliable in figuring out what the user really wants. We want to make use of product reviews, in particular the sentiments in the reviews left by the users. The choice of words by a user is indicative of her preference/dislike towards a certain type of product. By combining this insight with traditional algorithms like collaborative filtering/Matrix Factorization, we create a recommender system that is more personalized to the user.
 
 Another improvement our recommender provides is the inclusion of standard reviews of recommended item from reputed sources rather than from other users. Collaborative filtering does a good job at identifying the user interest but the actual reviews from other users provide little information about the item. Instead, reading a review of recommended book in our case by New York times will provide a lot more relevant information to the user.
 
