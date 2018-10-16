@@ -19,7 +19,7 @@ Our approach was to the get the sentiment score of the review on a scale of -1 t
 - Just using the sentiment scores to get the recommendations
 
 
-We found the best results for third approach opf supressing the less significant reviews. Our Recommendation system invlolves following steps:
+We found the best results for third approach of supressing the less significant reviews. Our Recommendation system invlolves following steps:
 - Get sentiment scores
 - Add the sentiment scores(suppresses) with rating to generate new ratings on a scale of 5.5 to 0.5
 - Get the recommendation based on chosen algorithm
